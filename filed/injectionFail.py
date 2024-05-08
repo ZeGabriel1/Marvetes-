@@ -38,10 +38,10 @@ for indice, row in df.iterrows():
     # print(values_Tuple)
     
     ## Script SQL de inserção
-    sql = "INSERT INTO teste (original_title, company, rate, metascore, minutes, release, budget, opening_weekend_usa, gross_usa, gross_worldwide) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+    # sql = """INSERT INTO filmes (original_title, company, rate, metascore, minutes) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"""
     
     ## Executando o script e passando os valores
-    cursor.execute(sql, values_Tuple)
+    # cursor.execute(sql, values_Tuple)
 
 ## Confirmando a inserção de dados    
 db.commit()

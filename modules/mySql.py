@@ -42,3 +42,27 @@ def createTable(path, cols_remove, table):
         print(f'Tabela {table} criada com sucesso!')
     except Exception as e:
         print(f'Ocorreu um erro na criação da tabela {table}: {e}')
+
+
+def readColumnsTable(table):
+    try:
+        ## Inicializando o cursor
+        cursor = db.cursor()
+        
+        ## Armazenando o comando de consulta no MySQL
+        comand = f'DESCRIBE {table}'
+        
+        ## Executa o cursor
+        cursor.execute(comand)        
+        
+        ## Pegando o resultado
+        result = cursor.fetchall()        
+        # print(result)
+        
+        ## Fecha o cursor
+        cursor.close()        
+        print(f'Colunas da tabela {table} lidas com sucesso!')
+        return result 
+    
+    except Exception as e:
+        print(f'Erro ao ler as colunas da tabela: {e}')

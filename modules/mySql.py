@@ -66,3 +66,27 @@ def readColumnsTable(table):
     
     except Exception as e:
         print(f'Erro ao ler as colunas da tabela: {e}')
+
+
+def readTable(table):
+    try:        
+        ## Inicializando o cursor
+        cursor = db.cursor()
+        
+        ## Armazenando o comando de consulta no MySQL
+        comand = f'SELECT * FROM {table}'
+        
+        ## Executa o cursor
+        cursor.execute(comand)        
+        
+        ## Pegando o resultado
+        result = cursor.fetchall()        
+        # print(result)
+        
+        ## Fecha o cursor
+        cursor.close()        
+        print('Tabela lida com sucesso!')
+        return result
+    
+    except Exception as e:
+        print(f'Erro ao tentar ler a tabela MySQL: {e}')

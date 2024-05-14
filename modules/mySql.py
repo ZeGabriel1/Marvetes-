@@ -34,8 +34,8 @@ def createTable(path, cols_remove, table):
         df = df.drop(columns=colums_remove)
         
         ## Consultando/verificando o dataframe
-        print(df.head())
-        print(df.info())
+        # print(df.head())
+        # print(df.info())
         
         ## Enviando os dados para o bando de dados MYSQL
         df.to_sql(table, con=engine, if_exists='append', index=False)

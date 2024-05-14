@@ -13,7 +13,8 @@ def createDoc(doc):
     try:
         result = collection.insert_one(doc)
         if result.acknowledged:
-            print('Documento inserido com sucesso')
+            # print('Documento inserido com sucesso')
+            ...
         else:
             print('Falha ao inserir o documento')
     except Exception as e:

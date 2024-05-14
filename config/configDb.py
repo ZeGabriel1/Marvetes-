@@ -5,8 +5,8 @@ def connectDb():
     try:
         db = mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="root",
+        user="user",
+        password="user",
         database=env.DATABASE
     )
 

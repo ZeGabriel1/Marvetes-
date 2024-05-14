@@ -40,7 +40,7 @@ python -m venv venv
 ```
 
 
-4 - Inicie o docker compose com o comando
+4 - Com o programa do docker aberto inicie o docker compose com o comando
 
 ```
 docker-compose up -d

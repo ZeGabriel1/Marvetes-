@@ -4,7 +4,7 @@ services:
     container_name: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: 'DB_MARVEL'
+      MYSQL_DATABASE: 'DB_MARVELVSDC'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'user'
       MYSQL_ROOT_PASSWORD: 'root'
